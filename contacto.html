@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serconfin Consultores</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #000;
+            /* Color de fondo negro */
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+        .whatsapp-float img {
+            width: 60px;
+            /* Ajusta el tamaño según sea necesario */
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+        .whatsapp-float img:hover {
+            transform: scale(1.1);
+        }
+        /* Encabezado */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        .logo img {
+            max-height: 50px;
+            max-width: 200px; /* Ajusta el tamaño según sea necesario */
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav li {
+            margin-left: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+        /* Sección de presentación */
+        .presentacion {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .presentacion h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .presentacion p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+        /* Carrusel */
+        .carousel-inner img {
+            max-height: 500px;
+            object-fit: cover;
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+        }
+        /* Pie de página */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .redes-sociales a {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .redes-sociales img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+        .redes-sociales img:hover {
+            transform: scale(1.2);
+        }
+        /* Estilos para el carrusel */
+        .carousel-item {
+            height: 400px;
+            /* Ajusta la altura según tus necesidades */
+        }
+        .carousel-item img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+         /* Estilos de las tarjetas de categorías */
+         .category-section {
+            text-align: center;
+            padding: 20px;
+        }
+        .category-section h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .category-item {
+            position: relative;
+            display: inline-block;
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .category-item .category-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.7; /* Ajusta la opacidad según lo desees */
+        }
+        .category-item .category-name {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 18px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        }
+        .card:hover {
+            background-color: #e6e6e6;
+        }
+        /* Estilos de la sección de servicios */
+        #services {
+            padding: 20px;
+        }
+        #services h2 {
+            color: #333;
+            font-size: 24px;
+        }
+        #services p {
+            margin-bottom: 20px;
+        }
+        #services ul {
+            margin-left: 20px;
+        }
+        #services li {
+            margin-bottom: 5px;
+        }
+        .logo img {
+            max-width: 200px; /* Adjust the size as needed for multiplatform display */
+            align-self: left; /* Align the logo to the left */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Serconfin/logo.png" alt="Logo de SERCONFIN">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about-us">Acerca de Nosotros</a></li>
+                <li><a href="#services">Servicios Destacados</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+         <section id="contact">         <h2>Contacto</h2>         <p>Para más información sobre nuestros productos y servicios, no dudes en contactarnos.</p>         <p>Teléfono: (123) 456-7890</p>         <p>Correo electrónico: info@serconfin.com</p> 
+        
+
+       
+    </main>
+    <footer>
+        <div class="redes-sociales">
+            <a href="https://www.linkedin.com" target="_blank" class="btn btn-outline-secondary">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" class="btn btn-outline-secondary">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" class="btn btn-outline-secondary">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" class="btn btn-outline-secondary">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+        <div class="container">
+            <div class="whatsapp-float">
+                <a href="https://wa.me/56996924145?text=¡Hola! Bienvenido a Serconfin Consultores. ¿En qué podemos ayudarte hoy?"
+                    target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+                        class="img-fluid">
+                </a>
+            </div>
+        </div>
+        <p>&copy; 2024 Serconfin Consultores. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="main.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GMNEWYEVZP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GMNEWYEVZP');
+</script>
+</body>
+
+</html>
